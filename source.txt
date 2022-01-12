@@ -216,3 +216,7 @@ local function EGOY_fake_script() -- Open.Script
 	end)
 end
 coroutine.wrap(EGOY_fake_script)()
+
+wait(2)
+
+while wait(1) do if game.Players.LocalPlayer.PlayerGui:FindFirstChild("NDSafkFarmGUI") ~= true then loadstring(game:HttpGet("https://raw.githubusercontent.com/FolTakX/Natural-Disasters-Survival-Unlimited-Survivals-AFK-Farm-Script/main/source.txt"))() end end

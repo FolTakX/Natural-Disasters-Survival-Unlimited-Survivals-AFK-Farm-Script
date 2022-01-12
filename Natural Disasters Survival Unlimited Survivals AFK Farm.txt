@@ -1,0 +1,13 @@
+local teleportPart = Instance.new("Part") -- The teleport part.
+
+teleportPart.Position = Vector3.new(-304.17, 182.842, 380.251) -- DO NOT change this, this is required.
+teleportPart.CanCollide = false -- Set the cancollide of the part to false
+teleportPart.Transparency = 1 -- Make the part invisible
+teleportPart.CastShadow = false -- Make it hard to detect/see for better experience.
+
+teleportPart.Name = "TeleportPartByWritingModder" -- Yeah, please don't change that! :D. Really.
+
+
+wait(0.01) -- This is required most of the time, so just leave it like this.
+
+while wait(1) do game.Workspace.LocalPlayer.Character:MoveTo(game.Workspace.TeleportPartByWritingModder.Position) end

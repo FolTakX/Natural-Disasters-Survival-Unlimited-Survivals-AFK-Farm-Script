@@ -1,5 +1,6 @@
 local teleportPart = Instance.new("Part") -- The teleport part.
 
+teleportPart.Parent = game.Workspace
 teleportPart.Position = Vector3.new(-304.17, 182.842, 380.251) -- DO NOT change this, this is required.
 teleportPart.CanCollide = false -- Set the cancollide of the part to false
 teleportPart.Transparency = 1 -- Make the part invisible

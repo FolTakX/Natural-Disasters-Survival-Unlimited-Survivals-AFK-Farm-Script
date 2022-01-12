@@ -3,7 +3,7 @@ local teleportPart = Instance.new("Part") -- The teleport part variable
 
 --Properties
 
-teleportPart.Position = Vector3.new(-304.17, 182.842, 380.251) -- DO NOT change this, this is required.
+teleportPart.Position = Vector3.new(-302.949, 185.071, 378.137) -- DO NOT change this, this is required.
 teleportPart.CanCollide = false -- Set the cancollide of the part to false
 teleportPart.Transparency = 1 -- Make the part invisible
 teleportPart.CastShadow = false -- Make it hard to detect/see for better experience.

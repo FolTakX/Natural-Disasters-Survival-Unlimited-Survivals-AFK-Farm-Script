@@ -1,13 +1,19 @@
 --Variables
 local teleportPart = Instance.new("Part") -- The teleport part variable
+local roof = Instance.new("Part") -- The roof part variable, the reason why it exists it's because with a roof you won't be able to die.
 
 --Properties
 
-teleportPart.Position = Vector3.new(-302.949, 185.071, 378.137) -- DO NOT change this, this is required.
+--The teleport part
+
+teleportPart.Anchored = true -- Make it anchored and make it so that it wont fall off, DO NOT set this to true.
+teleportPart.Position = Vector3.new(-320.799, 182.827, 351.517) -- DO NOT change this, this is required.
 teleportPart.CanCollide = false -- Set the cancollide of the part to false
 teleportPart.Transparency = 1 -- Make the part invisible
 teleportPart.CastShadow = false -- Make it hard to detect/see for better experience.
 teleportPart.Name = "TeleportPartByWritingModder" -- Yeah, please don't change that! :D. Really.
+
+
 
 --Location (DON'T CHANGE)
 

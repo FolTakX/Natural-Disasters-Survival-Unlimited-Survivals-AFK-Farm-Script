@@ -1,0 +1,218 @@
+-- Gui to Lua
+-- Version: 3.2
+
+--HANDMADE -- DO NOT TOUCH
+
+if game.Workspace:FindFirstChild("IslandTeleporterPart") ~= true then
+	local IslandTeleporterPart = Instance.new("Part")
+
+	IslandTeleporterPart.Anchored = true
+	IslandTeleporterPart.Name = "IslandTeleporterPart"
+	IslandTeleporterPart.Position = Vector3.new(-120.513, 50.483, -6.216)
+	IslandTeleporterPart.CanCollide = false
+	IslandTeleporterPart.Transparency = 1
+	IslandTeleporterPart.CastShadow = false
+
+	IslandTeleporterPart.Parent = game.Workspace
+end
+
+-- Instances:
+
+local NDSafkFarmGUI = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+local NONE = Instance.new("TextButton")
+local TeleportToIsland = Instance.new("TextButton")
+local NONE_2 = Instance.new("TextButton")
+local AfkFarmScript = Instance.new("TextButton")
+local NONE_3 = Instance.new("TextButton")
+local NONE_4 = Instance.new("TextButton")
+local NONE_5 = Instance.new("TextButton")
+local NONE_6 = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+NDSafkFarmGUI.Name = "NDSafkFarmGUI"
+NDSafkFarmGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NDSafkFarmGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = NDSafkFarmGUI
+Frame.BackgroundColor3 = Color3.fromRGB(0, 255, 136)
+Frame.BackgroundTransparency = 0.200
+Frame.Position = UDim2.new(0.287286073, 0, 0.238568574, 0)
+Frame.Size = UDim2.new(0, 409, 0, 283)
+Frame.Visible = false
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(212, 0, 3)
+Title.Position = UDim2.new(0.158924207, 0, 0, 0)
+Title.Size = UDim2.new(0, 344, 0, 55)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "WritingModder's NDS GUI"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextWrapped = true
+
+Exit.Name = "Exit"
+Exit.Parent = Frame
+Exit.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+Exit.Size = UDim2.new(0, 65, 0, 55)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextWrapped = true
+
+NONE.Name = "NONE"
+NONE.Parent = Exit
+NONE.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
+NONE.Position = UDim2.new(3.06939125, 0, 3.16921854, 0)
+NONE.Size = UDim2.new(0, 208, 0, 50)
+NONE.Font = Enum.Font.SourceSans
+NONE.Text = "MORE COMING SOON"
+NONE.TextColor3 = Color3.fromRGB(170, 0, 2)
+NONE.TextScaled = true
+NONE.TextSize = 14.000
+NONE.TextWrapped = true
+
+TeleportToIsland.Name = "TeleportToIsland"
+TeleportToIsland.Parent = Exit
+TeleportToIsland.BackgroundColor3 = Color3.fromRGB(255, 1, 5)
+TeleportToIsland.Position = UDim2.new(-0.0145836463, 0, 3.16945791, 0)
+TeleportToIsland.Size = UDim2.new(0, 189, 0, 50)
+TeleportToIsland.Font = Enum.Font.SourceSans
+TeleportToIsland.Text = "Teleport To Island"
+TeleportToIsland.TextColor3 = Color3.fromRGB(1, 156, 170)
+TeleportToIsland.TextScaled = true
+TeleportToIsland.TextSize = 14.000
+TeleportToIsland.TextWrapped = true
+
+NONE_2.Name = "NONE"
+NONE_2.Parent = Exit
+NONE_2.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
+NONE_2.Position = UDim2.new(3.06939101, 0, 4.20853281, 0)
+NONE_2.Size = UDim2.new(0, 208, 0, 50)
+NONE_2.Font = Enum.Font.SourceSans
+NONE_2.Text = "MORE COMING SOON"
+NONE_2.TextColor3 = Color3.fromRGB(170, 0, 2)
+NONE_2.TextScaled = true
+NONE_2.TextSize = 14.000
+NONE_2.TextWrapped = true
+
+AfkFarmScript.Name = "AfkFarmScript"
+AfkFarmScript.Parent = Exit
+AfkFarmScript.BackgroundColor3 = Color3.fromRGB(255, 1, 5)
+AfkFarmScript.Position = UDim2.new(-0.00753220776, 0, 4.22400331, 0)
+AfkFarmScript.Size = UDim2.new(0, 189, 0, 50)
+AfkFarmScript.Font = Enum.Font.SourceSans
+AfkFarmScript.Text = "AFK Farm Script (Rejoin to Undo)"
+AfkFarmScript.TextColor3 = Color3.fromRGB(1, 156, 170)
+AfkFarmScript.TextScaled = true
+AfkFarmScript.TextSize = 14.000
+AfkFarmScript.TextWrapped = true
+
+NONE_3.Name = "NONE"
+NONE_3.Parent = Exit
+NONE_3.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
+NONE_3.Position = UDim2.new(-0.0229163542, 0, 2.1146729, 0)
+NONE_3.Size = UDim2.new(0, 189, 0, 50)
+NONE_3.Font = Enum.Font.SourceSans
+NONE_3.Text = "MORE COMING SOON"
+NONE_3.TextColor3 = Color3.fromRGB(170, 0, 2)
+NONE_3.TextScaled = true
+NONE_3.TextSize = 14.000
+NONE_3.TextWrapped = true
+
+NONE_4.Name = "NONE"
+NONE_4.Parent = Exit
+NONE_4.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
+NONE_4.Position = UDim2.new(-0.00753173884, 0, 0.987400174, 0)
+NONE_4.Size = UDim2.new(0, 189, 0, 50)
+NONE_4.Font = Enum.Font.SourceSans
+NONE_4.Text = "MORE COMING SOON"
+NONE_4.TextColor3 = Color3.fromRGB(170, 0, 2)
+NONE_4.TextScaled = true
+NONE_4.TextSize = 14.000
+NONE_4.TextWrapped = true
+
+NONE_5.Name = "NONE"
+NONE_5.Parent = Exit
+NONE_5.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
+NONE_5.Position = UDim2.new(3.08477592, 0, 0.987400413, 0)
+NONE_5.Size = UDim2.new(0, 208, 0, 50)
+NONE_5.Font = Enum.Font.SourceSans
+NONE_5.Text = "MORE COMING SOON"
+NONE_5.TextColor3 = Color3.fromRGB(170, 0, 2)
+NONE_5.TextScaled = true
+NONE_5.TextSize = 14.000
+NONE_5.TextWrapped = true
+
+NONE_6.Name = "NONE"
+NONE_6.Parent = Exit
+NONE_6.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
+NONE_6.Position = UDim2.new(3.06939125, 0, 2.11467314, 0)
+NONE_6.Size = UDim2.new(0, 208, 0, 50)
+NONE_6.Font = Enum.Font.SourceSans
+NONE_6.Text = "MORE COMING SOON"
+NONE_6.TextColor3 = Color3.fromRGB(170, 0, 2)
+NONE_6.TextScaled = true
+NONE_6.TextSize = 14.000
+NONE_6.TextWrapped = true
+
+Open.Name = "Open"
+Open.Parent = NDSafkFarmGUI
+Open.BackgroundColor3 = Color3.fromRGB(60, 255, 7)
+Open.Position = UDim2.new(0.803082168, 0, 0, 0)
+Open.Size = UDim2.new(0, 115, 0, 49)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "OPEN NDS GUI"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+
+-- Scripts:
+
+local function PDSHDYN_fake_script() -- Exit.Script 
+	local script = Instance.new('Script', Exit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.Open.Visible = true
+	end)
+end
+coroutine.wrap(PDSHDYN_fake_script)()
+local function CJCMT_fake_script() -- TeleportToIsland.Script 
+	local script = Instance.new('Script', TeleportToIsland)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(game.Workspace.IslandTeleporterPart.Position)
+	end)
+	
+end
+coroutine.wrap(CJCMT_fake_script)()
+local function PVZT_fake_script() -- AfkFarmScript.Script 
+	local script = Instance.new('Script', AfkFarmScript)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FolTakX/Natural-Disasters-Survival-Unlimited-Survivals-AFK-Farm-Script/main/Natural%20Disasters%20Survival%20Unlimited%20Survivals%20AFK%20Farm.txt"))()
+	end)
+	
+end
+coroutine.wrap(PVZT_fake_script)()
+local function EGOY_fake_script() -- Open.Script 
+	local script = Instance.new('Script', Open)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		script.Parent.Parent.Frame.Visible = true
+	end)
+end
+coroutine.wrap(EGOY_fake_script)()

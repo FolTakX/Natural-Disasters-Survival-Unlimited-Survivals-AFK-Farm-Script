@@ -10,4 +10,4 @@ teleportPart.Name = "TeleportPartByWritingModder" -- Yeah, please don't change t
 
 wait(0.01) -- This is required most of the time, so just leave it like this.
 
-while wait(1) do game.Workspace.LocalPlayer.Character:MoveTo(game.Workspace.TeleportPartByWritingModder.Position) end
+while wait(1) do game.Players.LocalPlayer.Character:MoveTo(game.Workspace.TeleportPartByWritingModder.Position) end

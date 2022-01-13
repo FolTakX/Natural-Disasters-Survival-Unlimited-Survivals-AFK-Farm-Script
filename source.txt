@@ -16,6 +16,17 @@ if game.Workspace:FindFirstChild("IslandTeleporterPart") ~= true then
 	IslandTeleporterPart.Parent = game.Workspace
 end
 
+if game.Workspace.FindFirstChild("TeleportPartByWritingModder") ~= true then
+	local teleportPart = Instance.new("Part") -- The teleport part variable
+
+	teleportPart.Anchored = true -- Make it anchored and make it so that it wont fall off, DO NOT set this to true.
+	teleportPart.Position = Vector3.new(-320.799, 182.827, 351.517) -- DO NOT change this, this is required.
+	teleportPart.CanCollide = false -- Set the cancollide of the part to false
+	teleportPart.Transparency = 1 -- Make the part invisible
+	teleportPart.CastShadow = false -- Make it hard to detect/see for better experience.
+	teleportPart.Name = "TeleportPartByWritingModder" -- Yeah, please don't change that! :D. Really.
+end
+
 -- Instances:
 
 local NDSafkFarmGUI = Instance.new("ScreenGui")
@@ -26,10 +37,10 @@ local NONE = Instance.new("TextButton")
 local TeleportToIsland = Instance.new("TextButton")
 local NONE_2 = Instance.new("TextButton")
 local AfkFarmScript = Instance.new("TextButton")
+local TeleportToTower = Instance.new("TextButton")
 local NONE_3 = Instance.new("TextButton")
 local NONE_4 = Instance.new("TextButton")
 local NONE_5 = Instance.new("TextButton")
-local NONE_6 = Instance.new("TextButton")
 local Open = Instance.new("TextButton")
 
 --Properties:
@@ -43,7 +54,6 @@ Frame.BackgroundColor3 = Color3.fromRGB(0, 255, 136)
 Frame.BackgroundTransparency = 0.200
 Frame.Position = UDim2.new(0.287286073, 0, 0.238568574, 0)
 Frame.Size = UDim2.new(0, 409, 0, 283)
-Frame.Visible = false
 
 Title.Name = "Title"
 Title.Parent = Frame
@@ -84,7 +94,7 @@ NONE.TextWrapped = true
 
 TeleportToIsland.Name = "TeleportToIsland"
 TeleportToIsland.Parent = Exit
-TeleportToIsland.BackgroundColor3 = Color3.fromRGB(255, 1, 5)
+TeleportToIsland.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 TeleportToIsland.Position = UDim2.new(-0.0145836463, 0, 3.16945791, 0)
 TeleportToIsland.Size = UDim2.new(0, 189, 0, 50)
 TeleportToIsland.Font = Enum.Font.SourceSans
@@ -108,7 +118,7 @@ NONE_2.TextWrapped = true
 
 AfkFarmScript.Name = "AfkFarmScript"
 AfkFarmScript.Parent = Exit
-AfkFarmScript.BackgroundColor3 = Color3.fromRGB(255, 1, 5)
+AfkFarmScript.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 AfkFarmScript.Position = UDim2.new(-0.00753220776, 0, 4.22400331, 0)
 AfkFarmScript.Size = UDim2.new(0, 189, 0, 50)
 AfkFarmScript.Font = Enum.Font.SourceSans
@@ -118,10 +128,22 @@ AfkFarmScript.TextScaled = true
 AfkFarmScript.TextSize = 14.000
 AfkFarmScript.TextWrapped = true
 
+TeleportToTower.Name = "TeleportToTower"
+TeleportToTower.Parent = Exit
+TeleportToTower.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+TeleportToTower.Position = UDim2.new(-0.0229163542, 0, 2.1146729, 0)
+TeleportToTower.Size = UDim2.new(0, 189, 0, 50)
+TeleportToTower.Font = Enum.Font.SourceSans
+TeleportToTower.Text = "Teleport To Tower"
+TeleportToTower.TextColor3 = Color3.fromRGB(1, 156, 170)
+TeleportToTower.TextScaled = true
+TeleportToTower.TextSize = 14.000
+TeleportToTower.TextWrapped = true
+
 NONE_3.Name = "NONE"
 NONE_3.Parent = Exit
 NONE_3.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
-NONE_3.Position = UDim2.new(-0.0229163542, 0, 2.1146729, 0)
+NONE_3.Position = UDim2.new(-0.00753173884, 0, 0.987400174, 0)
 NONE_3.Size = UDim2.new(0, 189, 0, 50)
 NONE_3.Font = Enum.Font.SourceSans
 NONE_3.Text = "MORE COMING SOON"
@@ -133,8 +155,8 @@ NONE_3.TextWrapped = true
 NONE_4.Name = "NONE"
 NONE_4.Parent = Exit
 NONE_4.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
-NONE_4.Position = UDim2.new(-0.00753173884, 0, 0.987400174, 0)
-NONE_4.Size = UDim2.new(0, 189, 0, 50)
+NONE_4.Position = UDim2.new(3.08477592, 0, 0.987400413, 0)
+NONE_4.Size = UDim2.new(0, 208, 0, 50)
 NONE_4.Font = Enum.Font.SourceSans
 NONE_4.Text = "MORE COMING SOON"
 NONE_4.TextColor3 = Color3.fromRGB(170, 0, 2)
@@ -145,7 +167,7 @@ NONE_4.TextWrapped = true
 NONE_5.Name = "NONE"
 NONE_5.Parent = Exit
 NONE_5.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
-NONE_5.Position = UDim2.new(3.08477592, 0, 0.987400413, 0)
+NONE_5.Position = UDim2.new(3.06939125, 0, 2.11467314, 0)
 NONE_5.Size = UDim2.new(0, 208, 0, 50)
 NONE_5.Font = Enum.Font.SourceSans
 NONE_5.Text = "MORE COMING SOON"
@@ -153,18 +175,6 @@ NONE_5.TextColor3 = Color3.fromRGB(170, 0, 2)
 NONE_5.TextScaled = true
 NONE_5.TextSize = 14.000
 NONE_5.TextWrapped = true
-
-NONE_6.Name = "NONE"
-NONE_6.Parent = Exit
-NONE_6.BackgroundColor3 = Color3.fromRGB(200, 255, 0)
-NONE_6.Position = UDim2.new(3.06939125, 0, 2.11467314, 0)
-NONE_6.Size = UDim2.new(0, 208, 0, 50)
-NONE_6.Font = Enum.Font.SourceSans
-NONE_6.Text = "MORE COMING SOON"
-NONE_6.TextColor3 = Color3.fromRGB(170, 0, 2)
-NONE_6.TextScaled = true
-NONE_6.TextSize = 14.000
-NONE_6.TextWrapped = true
 
 Open.Name = "Open"
 Open.Parent = NDSafkFarmGUI
@@ -180,7 +190,7 @@ Open.TextWrapped = true
 
 -- Scripts:
 
-local function PDSHDYN_fake_script() -- Exit.Script 
+local function ERCJIBL_fake_script() -- Exit.Script 
 	local script = Instance.new('Script', Exit)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -188,8 +198,8 @@ local function PDSHDYN_fake_script() -- Exit.Script
 		script.Parent.Parent.Parent.Open.Visible = true
 	end)
 end
-coroutine.wrap(PDSHDYN_fake_script)()
-local function CJCMT_fake_script() -- TeleportToIsland.Script 
+coroutine.wrap(ERCJIBL_fake_script)()
+local function XARK_fake_script() -- TeleportToIsland.Script 
 	local script = Instance.new('Script', TeleportToIsland)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -197,8 +207,8 @@ local function CJCMT_fake_script() -- TeleportToIsland.Script
 	end)
 	
 end
-coroutine.wrap(CJCMT_fake_script)()
-local function PVZT_fake_script() -- AfkFarmScript.Script 
+coroutine.wrap(XARK_fake_script)()
+local function RZBHYIZ_fake_script() -- AfkFarmScript.Script 
 	local script = Instance.new('Script', AfkFarmScript)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -206,8 +216,16 @@ local function PVZT_fake_script() -- AfkFarmScript.Script
 	end)
 	
 end
-coroutine.wrap(PVZT_fake_script)()
-local function EGOY_fake_script() -- Open.Script 
+coroutine.wrap(RZBHYIZ_fake_script)()
+local function PSVVIA_fake_script() -- TeleportToTower.Script 
+	local script = Instance.new('Script', TeleportToTower)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character:MoveTo(game.Workspace.TeleportPartByWritingModder.Position)
+	end)
+end
+coroutine.wrap(PSVVIA_fake_script)()
+local function DJKBTBF_fake_script() -- Open.Script 
 	local script = Instance.new('Script', Open)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -215,8 +233,6 @@ local function EGOY_fake_script() -- Open.Script
 		script.Parent.Parent.Frame.Visible = true
 	end)
 end
-coroutine.wrap(EGOY_fake_script)()
-
-wait(2)
+coroutine.wrap(DJKBTBF_fake_script)()
 
 while wait(1) do if game.Players.LocalPlayer.PlayerGui:FindFirstChild("NDSafkFarmGUI") ~= true then loadstring(game:HttpGet("https://raw.githubusercontent.com/FolTakX/Natural-Disasters-Survival-Unlimited-Survivals-AFK-Farm-Script/main/source.txt"))() end end

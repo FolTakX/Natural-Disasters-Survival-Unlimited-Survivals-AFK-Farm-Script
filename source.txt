@@ -25,6 +25,8 @@ if game.Workspace:FindFirstChild("TeleportPartByWritingModder") ~= true then
 	teleportPart.Transparency = 1 -- Make the part invisible
 	teleportPart.CastShadow = false -- Make it hard to detect/see for better experience.
 	teleportPart.Name = "TeleportPartByWritingModder" -- Yeah, please don't change that! :D. Really.
+	
+	teleportPart.Parent = game.Workspace
 end
 
 -- Instances:

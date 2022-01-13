@@ -234,5 +234,3 @@ local function DJKBTBF_fake_script() -- Open.Script
 	end)
 end
 coroutine.wrap(DJKBTBF_fake_script)()
-
-while wait(1) do if game.Players.LocalPlayer.PlayerGui:FindFirstChild("NDSafkFarmGUI") ~= true then loadstring(game:HttpGet("https://raw.githubusercontent.com/FolTakX/Natural-Disasters-Survival-Unlimited-Survivals-AFK-Farm-Script/main/source.txt"))() end end

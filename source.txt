@@ -207,7 +207,7 @@ local function XARK_fake_script() -- TeleportToIsland.Script
 	local script = Instance.new('Script', TeleportToIsland)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		game.Players.LocalPlayer.Character:MoveTo(game.Workspace.TeleportPartByWritingModder.Position)
+		game.Players.LocalPlayer.Character:MoveTo(game.Workspace.IslandTeleporterPart.Position)
 	end)
 	
 end

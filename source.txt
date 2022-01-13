@@ -19,6 +19,7 @@ end
 if game.Workspace:FindFirstChild("TeleportPartByWritingModder") ~= true then
 	local teleportPart = Instance.new("Part") -- The teleport part variable
 
+	teleportPart.Name = "TeleportPartByWritingModder" -- Yeah, please don't change that! :D. Really.
 	teleportPart.Anchored = true -- Make it anchored and make it so that it wont fall off, DO NOT set this to true.
 	teleportPart.Position = Vector3.new(-320.799, 182.827, 351.517) -- DO NOT change this, this is required.
 	teleportPart.CanCollide = false -- Set the cancollide of the part to false

@@ -6,9 +6,9 @@
 if game.Workspace:FindFirstChild("IslandTeleporterPart") ~= true then
 	local IslandTeleporterPart = Instance.new("Part")
 
-	IslandTeleporterPart.Anchored = true
 	IslandTeleporterPart.Name = "IslandTeleporterPart"
 	IslandTeleporterPart.Position = Vector3.new(-120.513, 50.483, -6.216)
+	IslandTeleporterPart.Anchored = true
 	IslandTeleporterPart.CanCollide = false
 	IslandTeleporterPart.Transparency = 1
 	IslandTeleporterPart.CastShadow = false
@@ -20,12 +20,11 @@ if game.Workspace:FindFirstChild("TeleportPartByWritingModder") ~= true then
 	local teleportPart = Instance.new("Part") -- The teleport part variable
 
 	teleportPart.Name = "TeleportPartByWritingModder" -- Yeah, please don't change that! :D. Really.
-	teleportPart.Anchored = true -- Make it anchored and make it so that it wont fall off, DO NOT set this to true.
 	teleportPart.Position = Vector3.new(-320.799, 182.827, 351.517) -- DO NOT change this, this is required.
+	teleportPart.Anchored = true -- Make it anchored and make it so that it wont fall off, DO NOT set this to true.
 	teleportPart.CanCollide = false -- Set the cancollide of the part to false
 	teleportPart.Transparency = 1 -- Make the part invisible
 	teleportPart.CastShadow = false -- Make it hard to detect/see for better experience.
-	teleportPart.Name = "TeleportPartByWritingModder" -- Yeah, please don't change that! :D. Really.
 	
 	teleportPart.Parent = game.Workspace
 end

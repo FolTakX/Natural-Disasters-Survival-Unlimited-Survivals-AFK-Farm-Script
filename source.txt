@@ -16,7 +16,7 @@ if game.Workspace:FindFirstChild("IslandTeleporterPart") ~= true then
 	IslandTeleporterPart.Parent = game.Workspace
 end
 
-if game.Workspace.FindFirstChild("TeleportPartByWritingModder") ~= true then
+if game.Workspace:FindFirstChild("TeleportPartByWritingModder") ~= true then
 	local teleportPart = Instance.new("Part") -- The teleport part variable
 
 	teleportPart.Anchored = true -- Make it anchored and make it so that it wont fall off, DO NOT set this to true.
